@@ -13,7 +13,6 @@ class TestController extends AbstractController
     public function index(Request $request): Response
     {
         $greet = '';
-        dd($request);
         if ($name = $request->query->get('hello')) {
             $greet = sprintf('Hello %s!', htmlspecialchars($name));
         }

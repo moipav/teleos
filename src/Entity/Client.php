@@ -72,18 +72,7 @@ class Client
 
         return $this;
     }
-/*
-    public function getTariffId(): ?int
-    {
-        return $this->tariff_id;
-    }
 
-    public function setTariffId(int $tariff_id): static
-    {
-        $this->tariff_id = $tariff_id;
-
-        return $this;
-    }*/
 
     public function getTariffActivationDate(): ?\DateTimeInterface
     {
