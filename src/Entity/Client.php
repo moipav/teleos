@@ -26,11 +26,11 @@ class Client
 //    #[ORM\Column]
 //    private ?int $tariff_id = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $tariff_activation_date = null;
-
     #[ORM\OneToOne(inversedBy: 'tariff_id', cascade: ['persist', 'remove'])]
     private ?Tariff $tariff = null;
+
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    private ?\DateTimeInterface $tariff_activation_date = null;
 
     public function getId(): ?int
     {
